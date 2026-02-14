@@ -14,9 +14,6 @@ from google.protobuf.message import Message
 from Crypto.Cipher import AES
 import base64
 
-
-
-
 MAIN_KEY = base64.b64decode('WWcmdGMlREV1aDYlWmNeOA==')
 MAIN_IV = base64.b64decode('Nm95WkRyMjJFM3ljaGpNJQ==')
 RELEASEVERSION = "OB52"
@@ -54,8 +51,8 @@ def get_account_credentials(region: str) -> str:
     r = region.upper()
     if r == "BD":
         return "uid=3172461681&password=8E0FE33E466CE6668322330C38DD3FB332603958107B77B6306F12FEF3CCF850"
-    elif r in {"BR", "US", "SAC", "NA"}:
-        return "uid={}&password={}"
+    elif r in {"IND", "US", "SAC", "NA"}:
+        return "uid=4386980570&password=0DF0EFF1B562A76B1A7500A4562240A4A51F64C6E60CC24ACDAB884480745C02"
     else:
         return "uid={}&password={}"
 
